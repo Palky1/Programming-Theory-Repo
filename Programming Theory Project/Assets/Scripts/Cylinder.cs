@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Cylinder : Shape
+public class Cylinder : Shape //inheritance
 {
     [SerializeField] Text cylinderText;
 
     private string m_name = "Cylinder";
-    public string NameOfCylinder
+    public string NameOfCylinder    //encapsulation
     {
         get { return m_name; }
         set { m_name = value; }
@@ -21,7 +21,7 @@ public class Cylinder : Shape
             ClickOnObject();
         }
     }
-    private void ClickOnObject()
+    private void ClickOnObject()    //abstraction
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -31,7 +31,7 @@ public class Cylinder : Shape
                 DisplayText();
     }
 
-    protected override void DisplayText()
+    protected override void DisplayText()   //polymorphism
     {
         Debug.Log("Clicked on Cylinder");
         if (cylinderText.gameObject.activeSelf)

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Cube : Shape
+public class Cube : Shape   //inheritance
 {
     [SerializeField] Text cubeText;
 
     private string m_name = "Cube";
-    public string NameOfCube
+    public string NameOfCube    //encapsulation
     {
         get { return m_name; }
         set { m_name = value; }
@@ -21,7 +21,7 @@ public class Cube : Shape
             ClickOnObject();
         }
     }
-    private void ClickOnObject()
+    private void ClickOnObject()    //abstraction
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -31,7 +31,7 @@ public class Cube : Shape
                 DisplayText();
     }
 
-    protected override void DisplayText()
+    protected override void DisplayText() //polymorphism
     {
         Debug.Log("Clicked on Cube");
         if (cubeText.gameObject.activeSelf)
