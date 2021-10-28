@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sphere : Shape //inheritance
+public class Sphere : Shape //INHERITANCE
 {
     [SerializeField] Text sphereText;
 
     private string m_name = "Sphere";
-    public string NameOfSphere  //encapsulation
+    public string NameOfSphere  //ENCAPSULATION
     {
         get { return m_name; }
         set { m_name = value; }
@@ -21,7 +21,7 @@ public class Sphere : Shape //inheritance
             ClickOnObject();
         }
     }
-    private void ClickOnObject()    //abstraction
+    private void ClickOnObject()    //ABSTRACTION
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -31,7 +31,7 @@ public class Sphere : Shape //inheritance
                 DisplayText();
     }
 
-    protected override void DisplayText()   //polymorphism
+    protected override void DisplayText()   //POLYMORPHISM
     {
         Debug.Log("Clicked on Sphere");
         if (sphereText.gameObject.activeSelf)

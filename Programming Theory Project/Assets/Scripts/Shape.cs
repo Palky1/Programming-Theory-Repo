@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-    protected virtual void DisplayText() => Debug.Log("I am shape");    //polymorphism
+    protected virtual void DisplayText() => Debug.Log("I am shape");    //POLYMORPHISM
 }
